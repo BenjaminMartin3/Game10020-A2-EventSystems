@@ -28,12 +28,7 @@ public class Door : MonoBehaviour
         {
             Collider.enabled = false;
         }
-        if (Collider.enabled == false)
-        {
-            Debug.Log("ColliderDisable"); 
-        }
     }
-
     public void DoorState()
     {
         closedState = !closedState;

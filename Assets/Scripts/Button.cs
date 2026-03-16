@@ -24,14 +24,6 @@ public class Button : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (pressedState == false)
-        {
-            Debug.Log("Inactive");
-        }
-    }
-
     public void PressedState()
     {
         spriteRenderer.sprite = pressedState ? pressedDown : inactiveState;
@@ -42,7 +34,6 @@ public class Button : MonoBehaviour
         if (collision.gameObject)
         {
             pressedState = true;
-            Debug.Log("PressedDown");
             PressedState();
             OnPressed.Invoke(pressedState);
         }
