@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Vector2 originPosition;
+    public bool boxNeedsReset = false;
+
+    private void Start()
     {
-        
+        originPosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (boxNeedsReset == true)
+        {
+            boxNeedsReset = false;
+        }
+    }
+
+    public void ResetBox()
+    {
+        boxNeedsReset = true;
+        transform.position = originPosition;
     }
 }

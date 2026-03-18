@@ -6,12 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 0.5f;
     private Rigidbody2D rb;
-    private Vector2 input; 
+    private Vector2 input;
+    public Vector2 originPosition; 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        originPosition = transform.position;
     }
 
     // Update is called once per frame
