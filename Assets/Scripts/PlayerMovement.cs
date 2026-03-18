@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Float for movement speed
     public float speed = 0.5f;
     private Rigidbody2D rb;
+
+    //  Vector2 for input direction and start position 
     private Vector2 input;
     public Vector2 originPosition; 
 
@@ -13,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        // Setting the start position for later use 
         originPosition = transform.position;
     }
 
