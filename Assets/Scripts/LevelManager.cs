@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement; 
 
 public class LevelManager : MonoBehaviour
 {
@@ -42,6 +43,6 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        SceneManager.LoadScene("Lose"); 
     }
 }

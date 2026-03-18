@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class Door : MonoBehaviour
 {
@@ -33,5 +34,13 @@ public class Door : MonoBehaviour
     {
         closedState = !closedState;
         UpdateState(); 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && closedState == false)
+        {
+            SceneManager.LoadScene("Win"); 
+        }
     }
 }
